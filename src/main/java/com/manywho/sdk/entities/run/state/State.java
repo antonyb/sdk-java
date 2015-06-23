@@ -23,6 +23,8 @@ public class State {
     private StateEntry precommitStateEntry;
     private StateValueCollection values;
     private String authorizationHeader;
+    private Map<String, String> rootFaults;
+    private StateValueFaultCollection valueFaults;
 
     public String getId() {
         return id;
@@ -158,5 +160,21 @@ public class State {
 
     public void setAuthorizationHeader(String authorizationHeader) {
         this.authorizationHeader = authorizationHeader;
+    }
+
+    public Map<String, String> getRootFaults() {
+        return rootFaults;
+    }
+
+    public void setRootFaults(Map<String, String> rootFaults) {
+        this.rootFaults = rootFaults;
+    }
+
+    public StateValueFaultCollection getValueFaults() {
+        return valueFaults;
+    }
+
+    public void setValueFaults(StateValueFaultCollection valueFaults) {
+        this.valueFaults = valueFaults;
     }
 }
